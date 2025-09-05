@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/colourtime-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/colourtime-{{ version }}.tar.gz
   sha256: 3e1fe99c541dea22cd75467e0385e58551be4df953f073dcc4be2954338934b0
 
 build:
@@ -15,7 +15,7 @@ build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
